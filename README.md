@@ -77,12 +77,19 @@ See the [bar example](examples/).
 
 Once the library is installed, CMake will be able to find it using
 `find_package()` command. For example:
-
+```
     cmake_minimum_required(VERSION 2.6)
     project(Bar)
 
     find_package(Foo REQUIRED)
+    # use PROJECT_NAME_UPPERCASE_LIBRARIES
     include_directories(${FOO_INCLUDE_DIRS})
 
     add_executable(bar bar.cpp)
     target_link_libraries(bar ${FOO_LIBRARIES})
+```
+Could not find a package configuration file provided by [project]
+set prefix in ~/.bashrc
+```
+export CMAKE_PREFIX_PATH=/path/cmake
+```
